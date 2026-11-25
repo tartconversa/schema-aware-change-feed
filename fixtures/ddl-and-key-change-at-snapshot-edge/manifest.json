@@ -1,0 +1,17 @@
+{
+  "databases": {
+    "main": {
+      "file": "main.sql",
+      "rows": {
+        "jobs_base": 3,
+        "clients": 2
+      }
+    }
+  },
+  "events": 18,
+  "documents": [],
+  "settings": {
+    "source_cut": 6,
+    "log_bytes": 3200
+  }
+}

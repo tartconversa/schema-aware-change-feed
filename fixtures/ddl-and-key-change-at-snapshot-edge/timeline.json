@@ -1,0 +1,164 @@
+[
+  {
+    "pos": 6,
+    "kind": "snapshot_begin",
+    "client": "search",
+    "source_cut": 6,
+    "generation": 1
+  },
+  {
+    "pos": 7,
+    "kind": "begin",
+    "tx": "t7"
+  },
+  {
+    "pos": 8,
+    "kind": "row",
+    "tx": "t7",
+    "schema": "legacy",
+    "before": [
+      "J2",
+      "east",
+      "care",
+      "A-2"
+    ],
+    "after": [
+      "J22",
+      "east",
+      "care",
+      "A-2"
+    ]
+  },
+  {
+    "pos": 9,
+    "kind": "begin",
+    "tx": "t9"
+  },
+  {
+    "pos": 10,
+    "kind": "ddl",
+    "tx": "t9",
+    "schema": "current",
+    "parent": "legacy"
+  },
+  {
+    "pos": 11,
+    "kind": "commit",
+    "tx": "t7"
+  },
+  {
+    "pos": 12,
+    "kind": "commit",
+    "tx": "t9"
+  },
+  {
+    "pos": 13,
+    "kind": "begin",
+    "tx": "t13"
+  },
+  {
+    "pos": 14,
+    "kind": "row",
+    "tx": "t13",
+    "schema": "current",
+    "before": {
+      "key": "J1",
+      "district": "east",
+      "category": "maker",
+      "locations": [
+        [
+          "A-1",
+          0,
+          null
+        ]
+      ]
+    },
+    "after": {
+      "key": "J1",
+      "district": "south",
+      "category": "maker",
+      "locations": [
+        [
+          "A-1",
+          0,
+          20
+        ],
+        [
+          "S-5",
+          20,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "pos": 15,
+    "kind": "commit",
+    "tx": "t13"
+  },
+  {
+    "pos": 16,
+    "kind": "snapshot_end",
+    "client": "search",
+    "generation": 1
+  },
+  {
+    "pos": 17,
+    "kind": "reconnect",
+    "client": "search",
+    "generation": 2
+  },
+  {
+    "pos": 18,
+    "kind": "ack",
+    "client": "search",
+    "generation": 1,
+    "last_transaction": 15
+  },
+  {
+    "pos": 19,
+    "kind": "ack",
+    "client": "search",
+    "generation": 2,
+    "last_transaction": 11
+  },
+  {
+    "pos": 20,
+    "kind": "begin",
+    "tx": "t20"
+  },
+  {
+    "pos": 21,
+    "kind": "row",
+    "tx": "t20",
+    "schema": "current",
+    "before": null,
+    "after": {
+      "key": "J4",
+      "district": "east",
+      "category": "maker",
+      "locations": [
+        [
+          "A-1",
+          0,
+          30
+        ],
+        [
+          "A-3",
+          30,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "pos": 22,
+    "kind": "commit",
+    "tx": "t20"
+  },
+  {
+    "pos": 23,
+    "kind": "log_pressure",
+    "last_kept": 12
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "pos": 6,
+    "kind": "begin",
+    "tx": "reject"
+  },
+  {
+    "pos": 7,
+    "kind": "row",
+    "tx": "reject",
+    "schema": "legacy",
+    "before": [
+      "Q1",
+      "bay",
+      "maker",
+      "B-1"
+    ],
+    "after": null
+  },
+  {
+    "pos": 8,
+    "kind": "rollback",
+    "tx": "reject"
+  },
+  {
+    "pos": 9,
+    "kind": "begin",
+    "tx": "valid"
+  },
+  {
+    "pos": 10,
+    "kind": "row",
+    "tx": "valid",
+    "schema": "legacy",
+    "before": null,
+    "after": [
+      "Q2",
+      "bay",
+      "care",
+      "B-8"
+    ]
+  },
+  {
+    "pos": 11,
+    "kind": "commit",
+    "tx": "valid"
+  },
+  {
+    "pos": 12,
+    "kind": "ack",
+    "client": "n1",
+    "generation": 1,
+    "last_transaction": 11
+  },
+  {
+    "pos": 13,
+    "kind": "reconnect",
+    "client": "n2",
+    "generation": 2
+  }
+]
